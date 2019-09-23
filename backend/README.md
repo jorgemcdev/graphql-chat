@@ -35,7 +35,7 @@ $ brew update && brew doctor
 
 $ brew install redis-cli
 
-redis-cli -h redis-13388.c72.eu-west-1-2.ec2.cloud.redislabs.com -p 13388 -a 6jnMAdE4W8K1ipzzJ6dRxbdmySEbwNwb
+redis-cli -h xxxx.cloud.redislabs.com -p 13388 -a xxxx
 
 > scan 0  (list sessions)
 
