@@ -1,4 +1,4 @@
-# Booking Frontend
+# Chat Frontend
 
 ## Setup npm
 npm init
