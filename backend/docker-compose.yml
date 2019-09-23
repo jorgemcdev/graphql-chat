@@ -1,0 +1,30 @@
+version: '2'
+
+networks:
+  app-tier:
+    driver: bridge
+
+services:
+  mongodb:
+    container_name: mongo
+    image: 'bitnami/mongodb:latest'
+    ports:
+      - '27017:27017'
+    volumes:
+      - ./data:/bitnami
+    environment:
+      - MONGODB_USERNAME=chatuser
+      - MONGODB_PASSWORD=password123
+      - MONGODB_DATABASE=chat
+    networks:
+      - app-tier
+
+  redis:
+    container_name: redis
+    image: 'bitnami/redis:latest'
+    ports:
+      - '6379:6379'
+    environment:
+      - REDIS_PASSWORD=password123
+    networks:
+      - app-tier
